@@ -1,9 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (i = 0; i < array.length; i++) {
+    for (j = 0; j < array.length; j++) {
+      if (array[i] + array[j] === target && i != j) {
+        return true;
+      }
+
+    }
+
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  Quadratic time: O(n^2)
 */
 
 /* 
@@ -30,5 +41,5 @@ if (require.main === module) {
   console.log("Expecting: false");
   console.log("=>", hasTargetSum([1, 2, 5], 4));
 }
-
+console.log('hello')
 module.exports = hasTargetSum;
